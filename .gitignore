@@ -1,6 +1,7 @@
 
 build/
 libsndfile/
+/slicer2/actualslicer2/actualslicer2
 
 # created by git-ignore
 # Windows image file caches
