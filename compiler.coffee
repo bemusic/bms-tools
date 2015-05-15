@@ -1,7 +1,7 @@
 ---
 ---
 
-createWorker = -> new Worker('lib/bms-compiler/worker.js')
+createWorker = -> new Worker('lib/bms-compiler/worker.js?hash=75bce5a372a288434d2fe72df7da27e8')
 
 worker = createWorker()
 
