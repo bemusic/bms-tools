@@ -5,8 +5,19 @@ createWorker = -> new Worker('lib/bms-compiler/worker.js?hash=75bce5a372a288434d
 
 worker = createWorker()
 
+$(window).on 'i18n', ->
+  $('body').i18n()
+  translator = I18N.t('bsm.locale.translator')
+  $('#bt-translator').html(
+    if translator?
+      """Translation contributed by <a href="#{I18N.t('bsm.locale.translator_url')}">#{translator}</a>"""
+    else
+      "")
+
 $ ->
   setupDropZone()
+  if navigator.language.match /ja/
+    I18N.setLanguage('ja')
 
 setupDropZone = ->
   $('.bt-dropzone')
